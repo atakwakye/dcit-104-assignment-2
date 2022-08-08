@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+ void prime(int y);
+int main()
+{
+int n = 0;
+
+    cout << " Enter any number from 1 to anynumber : " <<endl;
+    cin >> n ;
+    prime(n);
+
+}
+ void prime (int y)
+ {
+   int sum = 0;
+    for (int e = y ; e > 1  ; e--)
+    {
+
+    bool isPrime = true;
+    for (int j = 2 ; j < e ; j++)
+    {
+        if(e % j == 0)
+            {
+            isPrime = false;
+            j = e;
+            }
+    }
+    if (isPrime == true)
+        {
+        cout << "prime number: " << e << " , " ;
+        sum = sum + e;
+        }
+    }
+    cout << endl<< "The sum of a given prime number is =: " << sum ;
+
+
+
+}
